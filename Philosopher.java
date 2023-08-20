@@ -4,8 +4,8 @@ import java.util.Random;
 
 public record Philosopher (
 		String name,
-		Tenedor left,
-		Tenedor right
+		Fork left,
+		Fork right
 		) implements Runnable {
 	
 	/**
