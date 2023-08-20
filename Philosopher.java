@@ -9,7 +9,7 @@ public record Philosopher (
 		) implements Runnable {
 	
 	/**
-	 * A way to not use the interblock
+	 * A way to not use the deadlock
 	 * @see Fork.acquire(); 
 	 */
 	@Override
