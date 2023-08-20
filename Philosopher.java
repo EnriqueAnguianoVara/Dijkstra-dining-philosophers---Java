@@ -2,14 +2,14 @@ package paquete;
 
 import java.util.Random;
 
-public record Filosofo (
+public record Philosopher (
 		String name,
 		Tenedor left,
 		Tenedor right
 		) implements Runnable {
 	
 	/**
-	 * Una forma de evitar el interbloqueo
+	 * A way to not use the interblock
 	 * @see Fork.acquire(); 
 	 */
 	@Override

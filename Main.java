@@ -7,25 +7,25 @@ import java.util.stream.IntStream;
 
 /**
  * @author enriq
- * Problema de la cena de los filósofos
+ * Dining philosophers problem
  */
-public class Principal {
+public class Main {
 	
-	static List<Tenedor> phi = List.of(
-			new Tenedor(new Semaphore(1)),
-			new Tenedor(new Semaphore(1)),
-			new Tenedor(new Semaphore(1)),
-			new Tenedor(new Semaphore(1)),
-			new Tenedor(new Semaphore(1))
+	static List<Fork> phi = List.of(
+			new Fork(new Semaphore(1)),
+			new Fork(new Semaphore(1)),
+			new Fork(new Semaphore(1)),
+			new Fork(new Semaphore(1)),
+			new Fork(new Semaphore(1))
 			);
 	
 	/**
 	 * @param args
-	 * Podría haber utilizado el método Thread (setName()) en vez de haber creado un atributo para la clase Philosopher
+	 * I could use here the Thread method setNmae() instead of creating an atribute for the Philosopher class
 	 */
 	public static void main(String[] args) {
 		IntStream.range(0, phi.size()).forEach(index->{
-			new Thread(new Filosofo(
+			new Thread(new Philosopher(
 					String.valueOf("Philosopher "+index),
 					phi.get(index % phi.size()),
 					phi.get((index+1) % phi.size())
