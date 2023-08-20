@@ -21,7 +21,7 @@ public class Main {
 	
 	/**
 	 * @param args
-	 * I could use here the Thread method setNmae() instead of creating an atribute for the Philosopher class
+	 * I could use here the Thread method setName() instead of creating an atribute for the Philosopher class
 	 */
 	public static void main(String[] args) {
 		IntStream.range(0, phi.size()).forEach(index->{
